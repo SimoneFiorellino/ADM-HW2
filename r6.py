@@ -6,8 +6,9 @@ import matplotlib.pyplot as plt
 #     return zip_list[0]/zip_list[1]
 
 def request_six(dataset):
-    num = dataset[dataset.event_type == 'purchase'].groupby([dataset.product_id]).product_id.count().sum()
-    denom = dataset[dataset.event_type == 'view'].groupby([dataset.product_id]).product_id.count().sum()
+
+    num = dataset[dataset.event_type == 'purchase'].product_id.count()
+    denom = dataset[dataset.event_type == 'view'].product_id.count()
     overall_conv_rate = num / denom
     print(f'Overall conversion rate: {overall_conv_rate}')
 
@@ -32,7 +33,7 @@ def request_six(dataset):
     
     y = zip(purchases_dataset, view_dataset)
     
-    zip_conversion_rate = zip(category_list, map(lambda y: y[0]/y[1] , y))
+    zip_conversion_rate = zip(category_list, map(lambda y: round(y[0]/y[1], 3) , y))
     zip_conversion_rate = sorted(zip_conversion_rate, key = lambda t: t[1], reverse=True)
     for i in zip_conversion_rate:
         print(i)

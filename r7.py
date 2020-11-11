@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 
 
 def request_seven(dataset):
+
     my_sum=0
     my_array = []
     x = dataset[dataset.event_type == 'purchase'].groupby([dataset.user_id])['price'].agg('sum').sort_values(ascending=False)
@@ -29,4 +30,4 @@ def request_seven(dataset):
             break
     #print(sum_twenty)
 
-    return print(f'20% of purchases: {sum_twenty}\n80% of purchases: {max(my_array)-sum_twenty}\nRatio: {sum_twenty/max(my_array)}')
+    return print(f'Most of your business, around {int((sum_twenty/max(my_array))*100)}%, likely comes from about 20% of your customers!')
