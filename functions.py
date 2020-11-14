@@ -6,7 +6,6 @@ def request_five(dataset):
 
     #use only rows with event_type == 'view'
     dataset_view = dataset[dataset.event_type == 'view']
-    dataset_view[dataset_view.index.duplicated()]
     #number of views for hours
     count_view_hour = dataset_view.groupby([dataset_view.event_time.dt.hour]).event_time.count()
 
@@ -41,7 +40,7 @@ def request_five(dataset):
     # for i in my_zip:
     #     print(i)
     df = pd.DataFrame(list(zip(weekday, average_visitors))).set_index(0)
-    ax = df.plot(kind='bar', title = 'Hourly avarage of views for each day of the week')
+    ax = df.plot(kind='bar', title = 'Hourly average of views for each day of the week')
     ax.legend(["Hourly avarage of views"]);
 
 
@@ -55,7 +54,7 @@ def request_six(dataset):
     print(f'Overall conversion rate: {round(overall_conv_rate, 3)}')
     #visualization of different between purchases and views
     tot = num + denom
-    df = pd.DataFrame({'overall conversion rate': [(num*100)/tot, (denom*100)/tot]},
+    df = pd.DataFrame({'overall conversion rate': [(num/tot)*100, (denom/tot)*100]},
                   index=['purchases', 'views'])
     plot = df.plot.pie(y='overall conversion rate', figsize=(5, 5))
     plt.show()
@@ -108,7 +107,7 @@ def request_seven(dataset):
     
     #visualize our results
     plt.plot(my_array_normalized, '-gD', markevery=[int(len(my_array_normalized)/100*20)], label='% comes from about 20% of your customers')
-    plt.legend(bbox_to_anchor=(1, 0.2))
+    plt.legend(bbox_to_anchor=(1, 0.2), loc='upper right')
     plt.xlabel('customers')  
     plt.ylabel('%') 
     plt.title('80/20 rule')
@@ -116,4 +115,4 @@ def request_seven(dataset):
 
     sum_twenty = my_array[int(len(my_array_normalized)/100*20)-1]
 
-    print(f'Most of your business, around {int((sum_twenty/my_array[-1])*100)}%, likely comes from about 20% of your customers')
+    print(f'Most of the business, around {int((sum_twenty/my_array[-1])*100)}%, likely comes from about 20% of customers')
