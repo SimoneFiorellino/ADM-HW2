@@ -91,6 +91,12 @@ def request_six(dataset):
     ax.hlines(round(overall_conv_rate, 3), -10, 20, linestyles='dashed')
     ax.annotate('overall conversion rate',(6,round(overall_conv_rate, 3)+0.002));
 
+    print('Category: conversion rate\n')
+    for i in zip_conversion_rate:
+        print(f'{i[0]}: {round(i[1], 3)}')
+
+        
+
 #Prove that the pareto principle applies to your store.
 def request_seven(dataset):
 
