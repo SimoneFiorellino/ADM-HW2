@@ -1,7 +1,7 @@
 # considerations about results #
 
 **all the analysis made in the main file can give useful insights to improve store performance.
- In the following lists are given some insights related to obtained results in each research question:**
+ In the following lists, some advice is given relatively to results in each research question:**
 
 ## RQ1 ##
 
