@@ -1,4 +1,4 @@
-# second homework of the course in algorithmic methods in Data Mining of the Master Degree course in Data Science of the Sapienza University of Rome #
+# Second Homework of the course in Algorithmic Methods in Data Mining of the Master Degree course in Data Science of the Sapienza University of Rome #
 ## A.Y. 2020/2021 ##
 ![](e-commerce.jpg)
 
