@@ -1,4 +1,4 @@
-# second homework of the course in algorithmic methods in data Mining of the master degree course in Data Science of the Sapienza University of Rome #
+# second homework of the course in algorithmic methods in Data Mining of the Master Degree course in Data Science of the Sapienza University of Rome #
 ## A.Y. 2020/2021 ##
 ![](e-commerce.jpg)
 
@@ -28,4 +28,4 @@ Plot the number of purchases of each category and show the conversion rate of ea
 7. The Pareto principle states that for many outcomes roughly 80% of consequences come from 20% of the causes. Also known as 80/20 rule, in e-commerce simply means that most of your business, around 80%, likely comes from about 20% of your customers.
 Prove that the pareto principle applies to your store.
 
-**In the main repository, it is possible to observe our results in the main.ipynb. This file contains the main jupyter notebook which includes both scripts, already ran, written in python language as well as markdown cells, whose aim is to describe in details our reasoning and our results. To perform this analysis has been used the pandas library for python, that provides useful functions for data manipulation, as well as the matplotlib.pyplot library which allows to give graphical summaries of the obtained results.**
+**In the main repository, it is possible to observe our results in the main.ipynb. This file contains the main jupyter notebook which includes both scripts, already ran, written in python language as well as markdown cells, whose aim is to describe our reasoning. To perform this analysis, has been used the pandas library for python, which provides useful functions for data manipulation, as well as the matplotlib.pyplot library, which allows to observe graphical summaries of the obtained results. In the results.md file there are a few considerations about the results obtained and some advice to improve the store performance**
